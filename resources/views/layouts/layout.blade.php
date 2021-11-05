@@ -36,10 +36,6 @@
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-minimize">
-                        {{-- <button id="minimizeSidebar" class="btn btn-warning btn-fill btn-round btn-icon">
-                            <i class="fa fa-ellipsis-v visible-on-sidebar-regular"></i>
-                            <i class="fa fa-navicon visible-on-sidebar-mini"></i>
-                        </button> --}}
                     </div>
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse">
@@ -53,23 +49,7 @@
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
-                                {{-- <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-gavel"></i>
-                                    <p class="hidden-md hidden-lg">
-                                        Actions
-                                        <b class="caret"></b>
-                                    </p>
-                                </a> --}}
-                                {{-- <ul class="dropdown-menu">
-                                    <li><a href="#">Create New Post</a></li>
-                                    <li><a href="#">Manage Something</a></li>
-                                    <li><a href="#">Do Nothing</a></li>
-                                    <li><a href="#">Submit to live</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Another Action</a></li>
-                                </ul> --}}
                             </li>
-
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-bell-o"></i>
@@ -87,7 +67,6 @@
                                     <li><a href="#">Another notification</a></li>
                                 </ul>
                             </li>
-
                             <li class="dropdown dropdown-with-icons">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-list"></i>
@@ -103,6 +82,11 @@
                                             <i class="pe-7s-help1"></i> Trợ giúp
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="{{ route('doipass', Session::get('idSV')) }}">
+                                            <i class="pe-7s-tools"></i> Mật khẩu
+                                        </a>
+                                    </li>
                                     <li class="divider"></li>
                                     <li>
                                         <a href="{{ route('logout') }}" class="text-danger">
@@ -112,7 +96,6 @@
                                     </li>
                                 </ul>
                             </li>
-
                         </ul>
                     </div>
                 </div>

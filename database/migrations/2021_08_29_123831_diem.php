@@ -16,8 +16,8 @@ class Diem extends Migration
         Schema::create('Diem', function (Blueprint $table) {
             $table->string('idSV');
             $table->string('idMH');
-            $table->unsignedBigInteger('idNH');
-            $table->foreign('idNH')->references('id')->on('NamHoc');
+            $table->string('idNH');
+            $table->foreign('idNH')->references('idNH')->on('NamHoc');
             $table->foreign('idSV')->references('idSV')->on('SinhVien');
             $table->foreign('idMH')->references('idMH')->on('MonHoc');
             $table->date('ThoiGian');

@@ -6,6 +6,7 @@
                 <div class="col-md-12">
                     <a href="https://bkacad.com/"><span><img src="../assets/img/logobkacad.png"></span></a>
                 </div>
+                <?php $sv = Session::get('HoatDong'); ?>
             </div>
         </div>
     </div>

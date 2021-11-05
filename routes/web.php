@@ -24,6 +24,11 @@ Route::middleware([CheckLogin::class])->group(function () {
         return view('dashboard');
     })->name('dashboard');
     Route::get('index/{idL}/{idSV}', [TonghopController::class, 'index'])->name('index');
-    Route::get('diem-sinh-vien/{idL}/{idSV}/{tenSV}', [TonghopController::class, 'diemsinhvien'])->name('diemsinhvien');
+    Route::get('diem-sinh-vien/{idL}/{idSV}/{tenSV}/{idNH}', [TonghopController::class, 'diemsinhvien'])->name('diemsinhvien');
+    Route::get('diem-nam-hoc/{idL}/{tenSV}/{idSV}', [TonghopController::class, 'diemnamhoc'])->name('diemnamhoc');
     Route::get('diem-thi-lai/{idL}/{tenMH}/{idMH}', [TonghopController::class, 'diemthilai'])->name('diemthilai');
+
+    //Đổi pass
+    Route::get('Doi-pass/{idSV}', [TonghopController::class, 'doipass'])->name('doipass');
+    Route::PUT('Doi-pass-process/{idSV}', [TonghopController::class, 'doipass2'])->name('doipass2');
 });

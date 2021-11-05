@@ -23,6 +23,7 @@ class SinhVien extends Migration
             $table->foreign('idL')->references('idL')->on('Lop');
             $table->string('queQuan');
             $table->string('passWord');
+            $table->boolean('HoatDong');
         });
     }
 

@@ -10,12 +10,11 @@
         <h2>Môn thi lại: {{ $tenMH }}</h2>
         <table class=" table table-hover table-striped">
             <thead>
-                <th>Mã học sinh</th>
-                <th>Tên học sinh</th>
+                <th style="text-align: center">Mã học sinh</th>
+                <th style="text-align: center">Tên học sinh</th>
                 <th style="text-align: center">Điểm thi lại lí thuyết</th>
                 <th style="text-align: center">Điểm thi lại thực hành</th>
-                <th>Nhận xét</th>
-                <th colspan="2" style="text-align: center">Hành động</th>
+                <th style="text-align: center">Nhận xét</th>
             </thead>
             <tbody>
                 {{-- ------------------------ --}}
@@ -73,8 +72,8 @@
                 <?php foreach ($monhoclai as $sinhvien): ?>
                 <?php $result = count($monhoclai); ?>
                 <tr>
-                    <td>{{ $sinhvien->idSV }}</td>
-                    <td>{{ $sinhvien->tenSV }}</td>
+                    <td style="text-align: center">{{ $sinhvien->idSV }}</td>
+                    <td style="text-align: center">{{ $sinhvien->tenSV }}</td>
                     <td style="text-align: center">
                         @if ($sinhvien->ThiLaiLyThuyet == '')
                             <a style="color:hotpink">{{ $rong }}</a>
@@ -239,7 +238,7 @@
                     </td>
                     <?php $quamon = 'Qua môn'; ?>
                     <?php $hoclai = 'Học Lại'; ?>
-                    <td>
+                    <td style="text-align: center">
                         @if ($sinhvien->ThiLaiLyThuyet == '')
                             @if ($sinhvien->ThiLaiThucHanh == '1')
                                 <a style="color:red">{{ $hoclai }}</a>
@@ -3437,7 +3436,6 @@
                 </tr>
                 <?php endforeach; ?>
             </tbody>
-
         </table>
         <div style="color: red; font-size:18px">
             <?php $nd = 'Hiện sinh viên đã qua môn hoặc điểm đang trong quá trình update. Xin lòng quay lại sau !'; ?>

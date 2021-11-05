@@ -18,6 +18,7 @@ class Lop extends Migration
             $table->string('tenLop');
             $table->string('idCN');
             $table->foreign('idCN')->references('idCN')->on('ChuyenNganh');
+            $table->boolean('HoatDong');
         });
     }
 

@@ -14,7 +14,7 @@ class NamHoc extends Migration
     public function up()
     {
         Schema::create('NamHoc', function (Blueprint $table) {
-            $table->id()->autoIncrement();
+            $table->string('idNH', 20)->primary();
             $table->string('tenNH');
         });
     }

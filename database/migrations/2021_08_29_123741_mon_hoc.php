@@ -18,8 +18,8 @@ class MonHoc extends Migration
             $table->string('tenMH');
             $table->string('idCN');
             $table->foreign('idCN')->references('idCN')->on('ChuyenNganh');
-            $table->unsignedBigInteger('idNH');
-            $table->foreign('idNH')->references('id')->on('NamHoc');
+            $table->string('idNH');
+            $table->foreign('idNH')->references('idNH')->on('NamHoc');
             $table->string('idL');
             $table->foreign('idL')->references('idL')->on('Lop');
         });
